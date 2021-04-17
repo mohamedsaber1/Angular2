@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <td>name</td>
+    <td>price</td>
+    <td>amount</td>
+    <td>total</td>
+    <td>options</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let itemcart of cart;index as i">
+    <td>{{itemcart.name}}</td>
+    <td>{{itemcart.price | currency}}</td>
+    <td><input type="number" placeholder="amount" [(ngModel)]="itemcart.amount"/></td>
+    <td>{{itemcart.price * itemcart.amount | currency}}</td>
+    <td>
+      <button class="btn btn-primary" (click)="save(i)">Save</button>
+      <button class="btn btn-danger" (click)="delete(i)">delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

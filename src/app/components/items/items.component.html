@@ -1,0 +1,16 @@
+<div class="body">
+  <h2 class="text-center">Add item</h2>
+ <form #f="ngForm" (ngSubmit)="additem(f)" >
+
+  <input ngModel name="name"  #name="ngModel" type="text" class="form-control"   placeholder="enter name"required />
+
+
+      <input ngModel name="price"  #password="ngModel" type="text" class="form-control"  minlength="6" placeholder="enter price" required/>
+
+
+          <input type="file" ngModel name="image" #image required/>
+      <button type="submit" class="btn btn-primary" >Add item</button>
+ </form>
+ </div>
+
+
